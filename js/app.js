@@ -1,4 +1,4 @@
-// LEVEL ONE
+// LEVEL TWO
 
 let users = [
     {
@@ -28,6 +28,11 @@ function loginUser() {
             // The return stops the function
             document.getElementById("login-message").innerHTML = "SUCCESS!";
             document.getElementById("login-message").style.color = "green";
+
+            // Create the cookie that will store our logged in user
+            Cookies.set("username", usernameInput);
+            // Send the user to the profile.html page
+            window.open("pages/profile.html", "_self");
             return;
         }
     }
